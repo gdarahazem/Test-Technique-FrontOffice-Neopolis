@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConfigSideBarComponent } from './config-side-bar/config-side-bar.component';
 import { UserCardComponent } from './user-card/user-card.component';
+import {ApiUsersService} from './services/api-users.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,8 +17,9 @@ import { UserCardComponent } from './user-card/user-card.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [ApiUsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,34 +12,34 @@ export class ConfigSideBarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+
     (function($) {
 
       "use strict";
-    
+
       var fullHeight = function() {
-    
+
         $('.js-fullheight').css('height', $(window).height());
         $(window).resize(function(){
           $('.js-fullheight').css('height', $(window).height());
         });
-    
+
       };
       fullHeight();
-    
-      $('#sidebarCollapse').on('click', function () {
+
+      $('.sidebarCollapse').on('click', function () {
           $('#sidebar').toggleClass('active');
       });
-    
+
     })(jQuery);
 
     $(function() {
 
-      var $sidebar   = $("#sidebar"), 
+      var $sidebar   = $("#sidebar"),
           $window    = $(window),
           offset     = $sidebar.offset(),
           topPadding = 15;
-  
+
       $window.scroll(function() {
           if ($window.scrollTop() > offset.top) {
               $sidebar.stop().animate({
@@ -51,10 +51,10 @@ export class ConfigSideBarComponent implements OnInit {
               });
           }
       });
-      
+
   });
-    
+
   }
-   
+
 
 }
