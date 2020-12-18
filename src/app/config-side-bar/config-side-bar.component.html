@@ -1,1 +1,58 @@
-<p>config-side-bar works!</p>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="sidebar-body p-4 pt-5">
+                <label style="font-size: 1.8em;">
+                    <i class="fa fa-cog mr-3"></i>CONFIGURATION
+                </label>
+                <br><br><br><br>
+                <form>
+                    <div class="form-group">
+                        <label>NOM</label>
+                        <input type="text" name="Nom" class="form-control" placeholder="Nom">
+                    </div>
+                    <div class="form-group">
+                        <label>PRENOM</label>
+                        <input type="text" name="Prenom" class="form-control" placeholder="Prenom">
+                    </div>
+                    <div class="form-group">
+                        <label>NOMBRE D'ENFANTS</label>
+                        <input type="number" name="nbEnfants" class="form-control" value="0" min="0">
+                    </div>
+                </form>
+
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                <i class="fa fa-bars"></i>
+            </button>
+
+
+
+            <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                <button type="button" id="addUserCardBtn" class="btn btn-success">
+                    <i class="fa fa-plus-circle mr-2"></i> ADD
+                </button>
+                <button type="button" id="addUserCardBtn1" class="btn btn-primary">
+                    <i class="fa fa-refresh mr-2"></i> LOAD
+                </button>
+            </div>
+
+            <app-user-card></app-user-card>
+        </div>
+    </div>
+</body>
+
+</html>
